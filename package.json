@@ -1,0 +1,23 @@
+{
+  "name": "wba2-testing",
+  "version": "1.0.0",
+  "description": "evaluating the exercises",
+  "main": "app2.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kf-fhkoeln/WBA2-Testing.git"
+  },
+    "dependencies": {"chalk": ">= 1.0.0"},
+  "keywords": [
+    "Test"
+  ],
+  "author": "moi",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/kf-fhkoeln/WBA2-Testing/issues"
+  },
+  "homepage": "https://github.com/kf-fhkoeln/WBA2-Testing#readme"
+}

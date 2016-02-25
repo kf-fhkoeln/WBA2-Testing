@@ -1,4 +1,5 @@
 var http = require('http');
+var chalk = require("chalk");
 var server = http.createServer();
 server.on("request", function(req, res){
     console.log("HTTP Server gestartet, Methode:" + req.method + "Pfad" + req.url);
@@ -8,7 +9,7 @@ server.on("request", function(req, res){
         body = body + data.toString();
     });
     req.on("end", function(){
-        console.log("beendet");
+        console.log(chalk.red("beendet"));
         var message = JSON.parse(body);
         res.writeHead(200,"OK",{"content-Type": "text/plain"});
         res.write("Hallo" + message.user + "deine Nachricht:" + message.content);

@@ -10,7 +10,8 @@
     "type": "git",
     "url": "git+https://github.com/kf-fhkoeln/WBA2-Testing.git"
   },
-    "dependencies": {"chalk": ">= 1.0.0"},
+    "dependencies": {"chalk": ">= 1.0.0",
+    "fs": ">=1.0.0"},
   "keywords": [
     "Test"
   ],

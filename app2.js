@@ -1,20 +1,16 @@
 var http = require('http');
 var chalk = require("chalk");
-var server = http.createServer();
-server.on("request", function(req, res){
-    console.log("HTTP Server gestartet, Methode:" + req.method + "Pfad" + req.url);
-    var body ="";
-    
-    req.on("data", function(data){
-        body = body + data.toString();
-    });
-    req.on("end", function(){
-        console.log(chalk.red("beendet"));
-        var message = JSON.parse(body);
-        res.writeHead(200,"OK",{"content-Type": "text/plain"});
-        res.write("Hallo" + message.user + "deine Nachricht:" + message.content);
-        res.end();
-    })
-        
-});
-server.listen(8888);
+var fs = require("fs");
+var content = "";
+var wkliste;
+var wkentry;
+fs.readFile(__dirname+"/wolkenkratzer.json",
+  function(err, data) {
+    if (err) throw err;
+   data.toString();
+  wkliste = JSON.parse(data.toString());
+  while (wkliste.wolkenkratzer.length > 0){
+    wkentry = wkliste.wolkenkratzer.pop();
+    console.log(JSON.stringify(wkentry) + "  ");
+  }
+  });
